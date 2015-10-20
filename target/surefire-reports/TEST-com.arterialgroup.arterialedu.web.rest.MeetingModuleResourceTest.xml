@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.043" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.045" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
@@ -62,10 +62,10 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="createMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.008"/>
-  <testcase name="getAllMeetingModules" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.015"/>
-  <testcase name="getMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.004"/>
-  <testcase name="getNonExistingMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.003"/>
+  <testcase name="createMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.011"/>
+  <testcase name="getAllMeetingModules" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.006"/>
+  <testcase name="getMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.008"/>
+  <testcase name="getNonExistingMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.004"/>
   <testcase name="deleteMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.006"/>
-  <testcase name="updateMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.007"/>
+  <testcase name="updateMeetingModule" classname="com.arterialgroup.arterialedu.web.rest.MeetingModuleResourceTest" time="0.01"/>
 </testsuite>

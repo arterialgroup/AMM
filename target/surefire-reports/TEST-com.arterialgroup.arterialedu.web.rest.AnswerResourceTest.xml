@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.079" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.11" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
@@ -62,12 +62,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="updateAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.025"/>
-  <testcase name="deleteAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.005"/>
-  <testcase name="getNonExistingAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.003"/>
-  <testcase name="getAllAnswers" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.017"/>
-  <testcase name="getAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.003"/>
-  <testcase name="createAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.009"/>
-  <testcase name="checkCorrectIsRequired" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.007"/>
-  <testcase name="checkTextIsRequired" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.01"/>
+  <testcase name="updateAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.03"/>
+  <testcase name="deleteAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.006"/>
+  <testcase name="getNonExistingAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.004"/>
+  <testcase name="getAllAnswers" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.025"/>
+  <testcase name="getAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.004"/>
+  <testcase name="createAnswer" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.013"/>
+  <testcase name="checkCorrectIsRequired" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.019"/>
+  <testcase name="checkTextIsRequired" classname="com.arterialgroup.arterialedu.web.rest.AnswerResourceTest" time="0.009"/>
 </testsuite>

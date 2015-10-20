@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.08" tests="8" errors="0" skipped="0" failures="0">
+<testsuite name="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.13" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib"/>
@@ -62,12 +62,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testAddResponseValidText" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.021"/>
-  <testcase name="testGetAggregatedReponsesForQuestionMultipleResponses" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.01"/>
-  <testcase name="testGetUserResponseForStepByModuleValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.01"/>
-  <testcase name="testGetAggregatedReponsesForQuestion" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.006"/>
-  <testcase name="testUpdateResponseValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.014"/>
-  <testcase name="testAddResponseInValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.006"/>
-  <testcase name="testAddResponseValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.008"/>
-  <testcase name="testGetAggregatedReponsesForQuestionNoResponse" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.005"/>
+  <testcase name="testAddResponseValidText" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.029"/>
+  <testcase name="testGetAggregatedReponsesForQuestionMultipleResponses" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.02"/>
+  <testcase name="testGetUserResponseForStepByModuleValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.024"/>
+  <testcase name="testGetAggregatedReponsesForQuestion" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.009"/>
+  <testcase name="testUpdateResponseValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.022"/>
+  <testcase name="testAddResponseInValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.008"/>
+  <testcase name="testAddResponseValid" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.009"/>
+  <testcase name="testGetAggregatedReponsesForQuestionNoResponse" classname="com.arterialgroup.arterialedu.service.UserResponseServiceTest" time="0.009"/>
 </testsuite>

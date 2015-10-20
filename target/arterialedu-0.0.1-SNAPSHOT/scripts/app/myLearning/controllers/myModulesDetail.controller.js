@@ -153,6 +153,9 @@ angular.module('arterialeduApp')
 									$scope.sections[key].newId = value;
 
 								});
+								if($scope.sections) {
+									$scope.loaded = true;
+								}
 
 
 							} else if (idx != -1 && idx >= ($scope.stepsArray.length-1) && endDate !== null) {
@@ -173,6 +176,9 @@ angular.module('arterialeduApp')
 									$scope.sections[key].newId = value;
 
 								});
+								if($scope.sections) {
+									$scope.loaded = true;
+								}
 
 							} else if (idx != -1 && idx >= ($scope.stepsArray.length-1) && endDate == null) {
 						
@@ -191,6 +197,9 @@ angular.module('arterialeduApp')
 									$scope.sections[key].newId = value;
 
 								});
+								if($scope.sections) {
+									$scope.loaded = true;
+								}
 
 								$scope.goToSubmit = function(sectionId) {
 									$state.go('confirm', { id : sectionId });
