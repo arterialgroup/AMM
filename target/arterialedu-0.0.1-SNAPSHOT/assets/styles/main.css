@@ -444,6 +444,21 @@ select.test {
   background-color: #5cb85c;
   height: 10px; }
 
+.loadedNotComplete {
+  display: none; }
+
+.loadingWheel {
+  display: block;
+  text-align: center;
+  margin: 50px 0; }
+
+.loadingWheel img {
+  width: 60px;
+  height: 60px; }
+
+.loadedComplete {
+  display: block; }
+
 .formGroup {
   margin: 0 0 15px 0; }
 

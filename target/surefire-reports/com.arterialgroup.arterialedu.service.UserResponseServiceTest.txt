@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.arterialgroup.arterialedu.service.UserResponseServiceTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec - in com.arterialgroup.arterialedu.service.UserResponseServiceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec - in com.arterialgroup.arterialedu.service.UserResponseServiceTest

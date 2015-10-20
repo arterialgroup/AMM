@@ -8,7 +8,10 @@ angular.module('arterialeduApp')
 
 	/*	----------------------------------------------------------------------------------------------------
 	 *	get section by module */
+	$scope.loaded = false;
 	$scope.sections = MyLearningSection.query({moduleId: moduleId});
+
+	
 
 	// var testSections = MyLearningSectionHttp.getSectionByModuleId(moduleId);
 	// testSections.then(function (data) {
@@ -216,17 +219,22 @@ angular.module('arterialeduApp')
 
 									angular.forEach($scope.startSection, function (value, key) {
 										
-										
+																			
 
 									// Take value and match it to the array position 
 									var positionOf = {
 										testId: key
 									}
 									
+
 									$scope.sections[key].testId = positionOf;
 									$scope.sections[key].newId = value;
 
+
 									});
+									if($scope.sections) {
+										$scope.loaded = true;
+									}
 								});
 							}
 
@@ -267,10 +275,17 @@ angular.module('arterialeduApp')
 										testId: key
 									}
 									
+
 									$scope.sections[key].testId = positionOf;
 									$scope.sections[key].newId = value;
+
 								}); //$scope.sections.newId = value;
 
+								if($scope.sections) {
+									$scope.loaded = true;
+								}
+
+									
 							}); // end of stepsBySectionId
 						}); // end of userProgressObj
 				}); // end forEach - userMoudleIdCollection
