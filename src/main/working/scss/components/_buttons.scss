@@ -1,0 +1,69 @@
+.btns {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	background-color: none;
+	padding: 10px 20px;
+	//transition: all 0.3s ease;
+	margin: 10px 0;
+
+	@media #{$tablet} {
+        font-size: 14px;
+    }
+
+}
+
+.btns-success {
+	background-color: none;
+	border: 2px solid $color-btn-success; //$success-green;
+	color: $color-btn-success;
+}
+
+.btns-success:hover {
+	background-color: $color-btn-success;
+	border: 2px solid $color-btn-success; //$success-green;
+	color: #FFF;
+}
+
+// .btns-success {
+// 	background-color: $color-btn-success;
+// 	border: none;
+// 	border-top: 3px solid $color-btn-success; //$success-green;
+// 	border-bottom: 3px solid $color-btn-success-darken; //$success-green;
+// 	color: #FFF;
+
+// }
+
+// .btns-success:hover {
+// 	background-color: lighten($color-btn-success-darken, 8%);
+// 	border-top: 3px solid lighten($color-btn-success-darken, 8%); //$success-green;
+// 	//border: 2px solid $color-btn-success; //$success-green;
+// 	//color: #FFF;
+// }
+
+.btns-info {
+	background-color: $color-btn-info;
+	border: none;
+	border-top: 3px solid $color-btn-info; //$success-green;
+	border-bottom: 3px solid $color-btn-info-darken; //darken($color-btn-info, 20%);
+	color: #FFF;
+}
+
+.btns-info:hover {
+	background-color: lighten($color-btn-info-darken, 8%);
+	border-top: 3px solid lighten($color-btn-info-darken, 8%)
+}

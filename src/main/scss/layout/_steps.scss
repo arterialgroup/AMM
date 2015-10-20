@@ -1,0 +1,36 @@
+/* ---------------------------------------------------------------------------------------- */
+/* Steps Styles 																			*/
+/* ---------------------------------------------------------------------------------------- */
+
+.qa-body--heading { 
+	margin: 20px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $color-thinLine;
+	font-size: 14px;
+
+	@media #{$tablet} {
+    	font-size: 22px;	
+    }
+
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Pre Styles 																			*/
+/* ---------------------------------------------------------------------------------------- */
+
+.answerOptions--group.disagree18-radio { margin-left: 65px; }
+.answerOptions--group.disagree18-radio:nth-of-type(2) { margin-left: 45px; }
+.disagree18-radio:nth-of-type(3) { margin-right: 30px; }
+
+/* ---------------------------------------------------------------------------------------- */
+/* Reienforcing Styles 																			*/
+/* ---------------------------------------------------------------------------------------- */
+
+.less.often21-radio { margin-left: 85px; }
+.less.often21-radio:nth-of-type(1) { margin-left: 0px; }
+.less.often21-radio:nth-of-type(2) { margin-left: 85px; }
+.less.often21-radio:nth-of-type(3) { margin-right: 20px; }
+
+.answerOptions--group.disagree27-radio { margin-left: 65px; }
+.answerOptions--group.disagree27-radio:nth-of-type(2) { margin-left: 45px; }
+.disagree27-radio:nth-of-type(3) { margin-right: 30px; }

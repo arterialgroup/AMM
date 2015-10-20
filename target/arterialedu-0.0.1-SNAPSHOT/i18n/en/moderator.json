@@ -1,0 +1,19 @@
+{
+    "arterialeduApp": {
+        "moderator" : {
+            "home": {
+                "title": "Moderators",
+                "createLabel": "Create a new Moderator",
+                "createOrEditLabel": "Create or edit a Moderator"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Moderator {{ id }}?"
+            },
+            "detail": {
+                "title": "Moderator"
+            },
+            "user": "user",
+            "meeting": "meeting"
+        }
+    }
+}

@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="arterialeduApp.meeting.detail.title">Meeting</span> {{meeting.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.meeting.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.meeting.startDate">StartDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.startDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.meeting.days">Days</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.days}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.meeting.activityId">ActivityId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.activityId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.meeting.meetingType">meetingType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.meetingType.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>CSS File</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{meeting.cssFile}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="meeting"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

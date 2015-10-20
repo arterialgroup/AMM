@@ -1,0 +1,27 @@
+
+.user-module--filters { display: block; }
+.user-module--filters .formGroup { display: inline-block; margin-right: 20px; text-align: center; }
+.user-module--filters > .formGroup input { width: auto; margin: 0 auto; margin-bottom: 5px; }
+.user-module--filters > .formGroup label { font-weight: normal; font-size: 14px; color: grey }
+.user-module--filters > .formGroup input[type="radio"]:checked + label { color: #333; }
+
+.user-module ul { list-style-type: none; }
+.user-module--item {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.user-module--item div {
+	@media #{$tablet} {
+		float: left;
+		margin-right: 20px;
+	}
+}
+
+
+/* --------------------------------------------- *
+ *	user-response: .html						 *
+ * --------------------------------------------  */
+
+.user-responses { padding: 20px 0; border-bottom: 1px solid lightgrey; }
+.user-responses:last-child { border-bottom: 0; }

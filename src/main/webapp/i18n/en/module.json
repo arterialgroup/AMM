@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "module" : {
+            "home": {
+                "title": "Modules",
+                "createLabel": "Create a new Module",
+                "createOrEditLabel": "Create or edit a Module"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Module {{ id }}?"
+            },
+            "detail": {
+                "title": "Module"
+            },
+            "name": "Name",
+            "description": "Description",
+            "section": "section"
+        }
+    }
+}

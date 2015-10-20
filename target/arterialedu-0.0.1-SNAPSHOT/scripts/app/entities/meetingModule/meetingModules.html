@@ -1,0 +1,135 @@
+<div>
+
+    <h2 translate="arterialeduApp.meetingModule.home.title">MeetingModule</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveMeetingModuleModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="arterialeduApp.meetingModule.home.createLabel">Create a new MeetingModule</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveMeetingModuleModal" tabindex="-1" role="dialog" aria-labelledby="myMeetingModuleLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myMeetingModuleLabel" translate="arterialeduApp.meetingModule.home.createOrEditLabel">Create or edit a MeetingModule</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="meetingModule.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.meetingModule.dateAvailable">DateAvailable</label>
+                            <input type="date" class="form-control" name="dateAvailable"
+                                   ng-model="meetingModule.dateAvailable">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.meetingModule.meeting">meeting</label>
+                            <select class="form-control" name="meeting" ng-model="meetingModule.meeting.id" ng-options="meeting.id as meeting.name for meeting in meetings">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.meetingModule.module">module</label>
+                            <select class="form-control" name="module" ng-model="meetingModule.module.id" ng-options="module.id as module.name for module in modules">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteMeetingModuleConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(meetingModule.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="arterialeduApp.meetingModule.delete.question" translate-values="{id: '{{meetingModule.id}}'}">Are you sure you want to delete this MeetingModule?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="arterialeduApp.meetingModule.dateAvailable">DateAvailable</th>
+                    <th translate="arterialeduApp.meetingModule.meeting">meeting</th>
+                    <th translate="arterialeduApp.meetingModule.module">module</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="meetingModule in meetingModules">
+                    <td><a ui-sref="meetingModuleDetail({id:meetingModule.id})">{{meetingModule.id}}</a></td>
+                    <td>{{meetingModule.dateAvailable}}</td>
+                    <td>{{meetingModule.meeting.name}}</td>
+                    <td>{{meetingModule.module.name}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="meetingModuleDetail({id:meetingModule.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(meetingModule.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(meetingModule.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pager">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a href="#">&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a href="#">&lt;</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a href="#">&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

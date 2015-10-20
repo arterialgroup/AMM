@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "meetingType" : {
+            "home": {
+                "title": "MeetingTypes",
+                "createLabel": "Créer un nouveau MeetingType",
+                "createOrEditLabel": "Créer ou éditer un MeetingType"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le MeetingType {{ id }} ?"
+            },
+            "detail": {
+                "title": "MeetingType"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}
+

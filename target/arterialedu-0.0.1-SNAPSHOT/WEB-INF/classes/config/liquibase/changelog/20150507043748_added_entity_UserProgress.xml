@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity UserProgress.
+    -->
+    <changeSet id="20150507043748" author="browan">
+        <createTable tableName="USERPROGRESS">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_module_id" type="bigint"/>
+            <column name="step_id" type="bigint"/>
+			<column name="start_date" type="date"/>
+			<column name="end_date" type="date"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="user_module_id"
+                                 baseTableName="USERPROGRESS"
+                                 constraintName="fk_userprogress_user_module_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="USERMODULE"/>
+
+        <addForeignKeyConstraint baseColumnNames="step_id"
+                                 baseTableName="USERPROGRESS"
+                                 constraintName="fk_userprogress_step_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="STEP"/>
+    </changeSet>
+</databaseChangeLog>

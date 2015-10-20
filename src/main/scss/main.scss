@@ -1,0 +1,358 @@
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@font-face {
+  font-family: "dripicons";
+  src:url("../fonts/dripicons.eot");
+  src:url("../fonts/dripicons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/dripicons.ttf") format("truetype"),
+    url("../fonts/dripicons.svg#dripicons") format("svg"),
+    url("../fonts/dripicons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+// @import "bootstrap-sass/assets/stylesheets/_bootstrap";
+
+// 1. Vendors (current are none)
+
+// 2. Utils
+@import 
+    "utils/variables",
+    "utils/functions",
+    "utils/mixins";
+
+// 3. Base    
+@import 
+    "base/base",
+    "base/fonts",
+    "base/helpers";
+
+// 4. Layouts
+@import
+    "layout/header",
+    "layout/module",
+    "layout/module-detail",
+    "layout/steps",
+    "layout/footer",
+    "layout/confirm",
+    "layout/moderator-dashboard";
+
+// 5. Components
+@import
+    "components/buttons",
+    "components/alerts",
+    "components/forms";
+
+// 6. Pages specific
+    //"pages/"; 
+
+@import "dripicons";
+@import "myLearning/myLearning";
+@import "myLearning/mySteps";
+
+@import "btns";
+@import "layout";
+@import "module";
+@import "forms/forms";
+@import "nav";
+
+
+// endbower
+
+body {
+    background: #fafafa;
+    font-family: $primary-font;
+    color: #333;
+    font-size: 14px;
+
+    @media #{$tablet} {
+        font-size: 16px;
+    }
+}
+
+a { 
+    font-size: 14px;
+    @media #{$tablet} {
+        font-size: 16px;
+    }
+
+}
+
+
+.container {
+
+    @media #{$desktop} {
+        padding-top: 30px;     
+    }
+
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.development {
+    position: absolute;
+    width: 149px;
+    height: 149px;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 1000;
+    background-image: url("../images/development_ribbon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.navbar-version {
+    font-size: 10px;
+    color: #ccc
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.error {
+    color: white;
+    background-color: red;
+}
+
+.hipster {
+    display: inline-block;
+    width: 347px;
+    height: 497px;
+    background: url("../images/hipster.png") no-repeat center top;
+    background-size: contain;
+}
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+    .hipster {
+        background: url("../images/hipster2x.png") no-repeat center top;
+        background-size: contain;
+    }
+}
+
+/* make sure browsers use the pointer cursor for anchors, even with no href */
+a:hover {
+  cursor: pointer;
+}
+
+
+/* start Password strength bar style */
+ul#strength {
+    display:inline;
+    list-style:none;
+    margin:0;
+    margin-left:15px;
+    padding:0;
+    vertical-align:2px;
+}
+
+.point:last {
+    margin:0 !important;
+}
+.point {
+    background:#DDD;
+    border-radius:2px;
+    display:inline-block;
+    height:5px;
+    margin-right:1px;
+    width:20px;
+}
+
+.float-right {
+    float: right !important; 
+}
+/* end Password strength bar style */
+
+// .module-tile {
+//     border: 1px solid blue; }
+
+.footer {
+    border-top: 1px solid #E0E0E0;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+    @media #{$tablet} {
+        margin-top: 200px;
+
+    }
+
+}
+
+// table {
+//     border: 1px solid black;
+// }
+
+// tr {
+//     border: 1px solid red;
+// }
+
+// td {
+//     border: 1px solid blue;
+// }
+.multiOption {
+    //margin-right: 30px;
+}
+
+// .Disagree {
+//     border: 1px solid red;
+// }
+
+// .disagree-radio {
+//     border: 1px solid blue;
+ 
+// }
+.disagree-radio {
+    margin-right: 18%; //15% //45px;
+
+    @media #{$tablet} {
+        margin-right: 0;
+
+        &:nth-child(3) {
+        // @media #{$tablet} {
+            margin-right: 30px;
+            margin-left: 72px;
+        }        
+    }
+}
+
+// .disagree-radio:nth-child(3) {
+//     @media #{$tablet} {
+//         margin-right: 30px;
+//         margin-left: 72px;
+//     }
+// }
+
+// .Never {
+//     border: 1px solid red;
+// }
+
+.never-radio {
+    // border: 1px solid blue;
+    @media #{$tablet} {
+        margin-right: 6px;    
+    }
+}
+// .21-40%
+
+.mobile {
+    display: table-row;
+     @media #{$tablet} {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+     @media #{$tablet} {
+        display: block;
+    }
+}
+
+td {
+    padding: 0 5px;
+}
+
+td p {
+    font-size: 16px;
+}
+
+.tableRow-list {
+    display: list-item;
+    list-style-type: none;
+    width: 100%;
+}
+
+.tableRow-list td {
+    margin-right: 10px;
+}
+
+.ui-helper-center {
+    text-align: center;
+}
+
+.testItem {
+    text-align:center;
+    vertical-align:middle; 
+    display: inline-block; //table-cell;
+    width: 65px;
+}
+
+.multiContain {
+    border: 1px solid red;
+    float: left;
+    width: 100%;
+    @media #{$tablet} {
+        width: auto;
+        float: right;
+    }
+}
+
+.multiTable-heading {
+    display: none;
+    @media #{$tablet} {
+        display: table-row;
+
+    }
+}
+
+.multiTable-content {
+    display: table-row;
+    // @media #{$tablet} {
+    //     display: none;
+
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+

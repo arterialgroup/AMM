@@ -1,0 +1,88 @@
+@mixin alert-settings($background, $color, $border) {
+	background-color: $background;
+	color: $color;
+	border: 1px solid $border;
+}
+
+.alerts {
+	padding: 15px;
+	margin: 20px 0;
+	border: 1px solid transparent;
+}
+
+.alerts-success {
+	@include alert-settings($color-alert-success, $color-alert-success-text, $color-alert-success-border)
+}
+
+.alerts-danger {
+	@include alert-settings($color-alert-danger, $color-alert-danger-text, $color-alert-danger-border)
+}
+
+.alerts-info {
+	@include alert-settings($color-alert-info, $color-alert-info-text, $color-alert-info-border)
+}
+
+.has-error {
+	@include alert-settings($color-alert-danger, $color-alert-danger-text, $color-alert-danger-border)
+}
+
+select.test {
+	@include alert-settings($color-alert-danger, $color-alert-danger-text, $color-alert-danger-border)	
+}
+.has-error p {
+	margin: 10px;
+}
+
+.val-error {
+	display: inline-block;
+	@include alert-settings($color-alert-danger, $color-alert-danger-text, $color-alert-danger-border)
+}
+
+.val-error > p {
+	margin: 10px;
+}
+
+.completed {
+	//background: red;
+	//color: red;
+
+}
+
+.completed > li {
+	//background: red;
+	opacity: 0.8;
+	color: #D6D6D6;
+}
+
+.arrowCompleted { 
+	color: green;
+	font-size: 40px;
+	background-color: $color-tri; //#E9E9E9;
+	border-left: 1px solid #DBDBDB;
+	position: absolute;
+	height: 100%;
+	padding: 0 20px;
+	padding-top: 18px;
+	top: 0;
+	right: 0;
+	text-align: center;
+	transition: color 0.3s ease;
+	transition: background 0.5s ease;
+	z-index: 0;
+}
+.moduleList-item:hover .arrowCompleted { 
+	background-color: $color-tri; 
+	color: green; 
+}
+
+
+.progressText {
+	margin-top: 20px;
+	margin-bottom: -15px;
+	clear: both;
+}
+
+.completePercentage {
+	background-color: $color-btn-success;
+	height: 10px;
+}

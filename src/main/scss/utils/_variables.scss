@@ -1,0 +1,29 @@
+// fonts 
+$primary-font: 'Lato', Arial, sans-serif; //'Open Sans', sans-serif;
+
+// color
+$primary-color: red;
+$color-secondary: #4062ad;
+$color-tri: #E9E9E9;
+$color-thinLine: #DBDBDB;
+$color-listBody: #F6F6F6; 
+$hover-color: #e3e3e3;
+$success-green: #5cb85c;
+$color-btn-success: #5cb85c;
+$color-btn-success-lighten: lighten(#5cb85c, 10%);
+$color-btn-success-darken: darken(#5cb85c, 15%);
+$color-btn-info: #5bc0de;
+$color-btn-info-lighten: lighten(#5bc0de, 10%);
+$color-btn-info-darken: darken(#5bc0de, 20%);
+
+$color-alert-success: #dff0d8;
+$color-alert-success-text: $color-btn-success;
+$color-alert-success-border: #d6e9c6;
+
+$color-alert-danger: #f2dede;
+$color-alert-danger-text: #a94442;
+$color-alert-danger-border: #ebccd1;
+
+$color-alert-info: #d9edf7;
+$color-alert-info-text: #31708f;
+$color-alert-info-border: #bce8f1;

@@ -1,0 +1,5 @@
+name;description
+CHECKBOX;Checkbox question
+RADIO;Radio Button question
+FREETEXT;Free Text question
+DROPDOWN;Dropdown question

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Question.
+    -->
+    <changeSet id="20150507032558" author="jhipster">
+        <createTable tableName="QUESTION">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="text" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="series" type="integer"/>
+            <column name="showResults" type="bit"/>
+            <column name="question_type_id" type="bigint"/>
+            <column name="step_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="question_type_id"
+                                 baseTableName="QUESTION"
+                                 constraintName="fk_question_question_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="QUESTION_TYPE"/>
+
+        <addForeignKeyConstraint baseColumnNames="step_id"
+                                 baseTableName="QUESTION"
+                                 constraintName="fk_question_step_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="STEP"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507031843_added_entity_Section_type.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507031924_added_entity_Question_type.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507032022_added_entity_Module.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507032221_added_entity_Section.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507032431_added_entity_Step.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507032558_added_entity_Question.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507032643_added_entity_Answer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150507043748_added_entity_UserModule.xml" relativeToChangelogFile="false"/>
+	<!-- Manual entries made for custom entity objects -->
+	<include file="classpath:config/liquibase/changelog/20150507043748_added_entity_UserProgress.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150507043748_added_entity_UserResponse.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150518032717_added_entity_MeetingType.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150518005554_added_entity_Meeting.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150518005840_added_entity_MeetingModule.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150518010037_added_entity_Attendee.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150601001543_added_entity_ModuleType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150601001656_added_entity_Moderator.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150604015647_added_entity_QuestionGroup.xml" relativeToChangelogFile="false"/>
+    <!-- JHipster will add liquibase changelogs here -->
+	<!-- Table updates here -->
+	<include file="classpath:config/liquibase/changelog/20150526010037_updated_entity_Attendee.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150527010037_updated_entity_Meeting.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150601032022_updated_entity_Module.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150526020037_updated_entity_Attendee.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150604015647_updated_entity_Question.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150605015647_loaddata_ModuleTypes.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150605015647_loaddata_QuestionTypes.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150605015647_loaddata_SectionTypes.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150609015647_loaddata_MeetingTypes.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150615010037_updated_entity_Meeting.xml" relativeToChangelogFile="false"/>
+	<include file="classpath:config/liquibase/changelog/20150616010037_updated_entity_UserResponse.xml" relativeToChangelogFile="false"/>
+	<!-- Table updates here -->
+</databaseChangeLog>

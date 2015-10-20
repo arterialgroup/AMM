@@ -1,0 +1,21 @@
+<section class="row clearfix pageTitle">
+	<h1 class="pageTitle pageTitle--module">{{meeting.name}}</h1>
+</section>
+
+<section class="row">
+	<ul class="col-sm-12 moduleList" ng-repeat="module in modulesForMeeting" ng-class="{ 'completed' : module.completed.status}">		
+	<!-- <ul class="col-sm-12 moduleList" ng-repeat="module in modulesForMeeting"> -->
+		<li class="mainPanel moduleList-item clearfix">						
+			<a class="blockLink" ui-sref="myModulesDetail({id:module.id})" ng-if="!module.completed.status"></a>
+			<!-- <a class="blockLink" ui-sref="myModulesDetail({id:module.id})"></a> -->
+			<span class="icon icon-moduleList icon-document-new"></span>
+			<div class="moduleList-body">
+				<h3 class="moduleList-body--heading">{{module.name}}</h3>			
+				<p>{{module.description}}</p>
+				<p>{{modules.sectionCount}}</p>
+			</div>
+			<!-- <span class="icon-chevron-right icon-arrow float-right"></span> -->
+			<span class="icon-chevron-right icon-arrow float-right" ng-class="{true: 'icon-checkmark icon-arrow float-right arrowCompleted', false: 'icon-chevron-right icon-arrow float-right'}[module.completed.status]"></span>
+		</li>
+	</ul>
+</section>

@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "moduleType" : {
+            "home": {
+                "title": "ModuleTypes",
+                "createLabel": "Créer un nouveau ModuleType",
+                "createOrEditLabel": "Créer ou éditer un ModuleType"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ModuleType {{ id }} ?"
+            },
+            "detail": {
+                "title": "ModuleType"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}
+

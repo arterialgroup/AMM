@@ -1,0 +1,157 @@
+<div>
+
+    <h2 translate="arterialeduApp.section.home.title">Section</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveSectionModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="arterialeduApp.section.home.createLabel">Create a new Section</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveSectionModal" tabindex="-1" role="dialog" aria-labelledby="mySectionLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="mySectionLabel" translate="arterialeduApp.section.home.createOrEditLabel">Create or edit a Section</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="section.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.section.name">Name</label>
+                            <input type="text" class="form-control" name="name"
+                                   ng-model="section.name" required>
+
+                            <div ng-show="editForm.name.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.section.description">Description</label>
+                            <input type="text" class="form-control" name="description"
+                                   ng-model="section.description">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.section.series">Series</label>
+                            <input type="number" class="form-control" name="series"
+                                   ng-model="section.series">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.section.module">module</label>
+                            <select class="form-control" name="module" ng-model="section.module.id" ng-options="module.id as module.name for module in modules">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.section.section_type">section_type</label>
+                            <select class="form-control" name="section_type" ng-model="section.section_type.id" ng-options="section_type.id as section_type.name for section_type in section_types">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteSectionConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(section.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="arterialeduApp.section.delete.question" translate-values="{id: '{{section.id}}'}">Are you sure you want to delete this Section?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="arterialeduApp.section.name">Name</th>
+                    <th translate="arterialeduApp.section.description">Description</th>
+                    <th translate="arterialeduApp.section.series">Series</th>
+                    <th translate="arterialeduApp.section.module">module</th>
+                    <th translate="arterialeduApp.section.section_type">section_type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="section in sections">
+                    <td><a ui-sref="sectionDetail({id:section.id})">{{section.id}}</a></td>
+                    <td>{{section.name}}</td>
+                    <td>{{section.description}}</td>
+                    <td>{{section.series}}</td>
+                    <td>{{section.module.name}}</td>
+                    <td>{{section.section_type.name}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="sectionDetail({id:section.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(section.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(section.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pager">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a href="#">&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a href="#">&lt;</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a href="#">&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

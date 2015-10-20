@@ -1,0 +1,163 @@
+/*	------------------------------------------
+module-tile */
+
+.module-tile { margin-bottom: 20px; }
+
+.module-tile-item {
+	cursor: pointer;
+	border: 1px solid #BEBEBE;
+	border-radius: 2px;
+	padding: 20px 10px;
+	transition: background 0.3s ease;
+	&:hover {
+		background-color: #e3e3e3;
+	}
+}
+
+.tile-link {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease-in;
+}
+
+
+/*	------------------------------------------
+question and answer */
+
+.question li {
+	padding: 5px 10px;
+}
+
+.correct-answer p {
+	margin: 10px 0;
+}
+
+.multiOption {
+	width: 100%;
+	padding: 0;
+	margin-right: 0;
+	
+	@media #{$tablet} {
+		width: auto;
+		//margin-top: -30px;
+		margin-right: 15px;
+		//padding: 0;
+	}
+}
+
+.answerText {
+	position: relative;
+}
+
+.questionOptions--group p, .multiOption li, .multiOption li p{
+	font-size: 10px;
+
+	@media #{$tablet} {
+		font-size: 14px;
+	}
+
+}
+
+.questionOptions--group {
+	float: left;
+	display: inline-block;
+	padding: 0;
+	
+	@media #{$tablet} {
+		max-width: 55%;
+	}
+	@media #{$desktop} {
+		max-width: 62%;
+	}
+
+}
+
+.questionList {
+	list-style-type: none;
+}
+
+.multiOption li p {
+	
+	@media #{$tablet} {
+	display: none;
+	}
+
+}
+
+
+.answerOptions--group {
+	float: left;
+	margin-right: 10%; //15% //45px;
+	list-style-type: none;
+
+	@media #{$tablet} {
+		margin-right: 0;
+		margin-left: 50px
+	}
+
+
+}
+
+.answerOptions--group label {
+	text-align: center;
+	display: inline-block;
+}
+
+// .answerOptions--group:first-child {
+// 	// float: left;
+// 	// margin-right: 8%; //15% //45px;
+// 	// list-style-type: none;
+
+// 	@media #{$tablet} {
+// 		//margin-right: 0;
+// 		margin-left: 50px
+// 		border: 1px solid red;
+// 	}
+
+
+// }
+
+// .groupAnswer {
+
+// }
+
+.answerText-list {
+	margin-right: 5px;
+	padding: 0;
+	float: right;
+}
+
+.answerText-text {
+	margin-left: 10px;
+	float: left;
+	list-style-type: none;
+
+	@media #{$desktop} {
+		margin-left: 14px;
+	float: left;
+	list-style-type: none;
+	}
+
+	@media #{$desktop} {
+		
+	}
+}
+
+.answerOptionsText {
+	display: none;
+	margin-left: 10px;
+	list-style-type: none;
+
+	@media #{$tablet} {
+		display: block;
+	}
+
+}
+
+
+
+

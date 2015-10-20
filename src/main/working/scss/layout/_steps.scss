@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------------------------------- */
+/* Steps Styles 																			*/
+/* ---------------------------------------------------------------------------------------- */
+
+.qa-body--heading { 
+	margin: 20px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $color-thinLine;
+	font-size: 14px;
+
+	@media #{$tablet} {
+    	font-size: 22px;	
+    }
+
+}

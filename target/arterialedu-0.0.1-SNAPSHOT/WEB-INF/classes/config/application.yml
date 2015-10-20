@@ -1,0 +1,33 @@
+# Disable the spring security default configuration from spring-boot-actuator
+management.security.enabled: true
+security.basic.enabled: false
+
+# Disable Jolokia - An http/json bridge for remote JMX access
+endpoints.jolokia.enabled: false
+
+# security configuration (this key should be unique for your application, and kept secret)
+jhipster.security.rememberme.key: 71f1099632d806e83b4aea968b988f24f4089d01
+
+async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+
+mail:
+    host: smtp.sendgrid.net
+    port: 25
+    username: BGoYjTbZLk
+    password: HtKlKN9n1DvY0314
+    protocol: smtp
+    tls: false
+    auth: false
+    from: digital@arterialgroup.com
+
+
+swagger:
+    title: arterialedu API
+    description: arterialedu applications and beyond!
+    termsOfServiceUrl: http://jhipster.github.io/
+    contact:
+    license: Apache 2.0
+    licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html

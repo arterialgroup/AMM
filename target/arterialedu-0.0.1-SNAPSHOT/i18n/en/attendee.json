@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "attendee" : {
+            "home": {
+                "title": "Attendees",
+                "createLabel": "Create a new Attendee",
+                "createOrEditLabel": "Create or edit a Attendee"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Attendee {{ id }}?"
+            },
+            "detail": {
+                "title": "Attendee"
+            },
+            "attended": "Attended",
+            "meeting": "meeting",
+            "user": "user"
+        }
+    }
+}

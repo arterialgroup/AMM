@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="arterialeduApp.section.detail.title">Section</span> {{section.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.section.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{section.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.section.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{section.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.section.series">Series</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{section.series}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.section.module">module</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{section.module.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.section.section_type">section_type</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{section.section_type.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="section"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

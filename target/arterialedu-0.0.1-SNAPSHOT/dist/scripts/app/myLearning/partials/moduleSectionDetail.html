@@ -1,0 +1,11 @@
+<section class="clearfix page-title">
+	<h1 class="pull-left">Section 1</h1>
+</section>	
+<section class="row">
+	<ul class="moduleList">
+		<li class="moduleList-item moduleList-item--singleLine" ng-repeat="step in steps track by $index">
+			<a class="blockLink" ui-sref="sectionStepDetail({id:step.id})"></a>
+			{{step.name}}
+		</li>
+	</ul>
+</section>

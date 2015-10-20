@@ -1,0 +1,28 @@
+<section class="row clearfix pageTitle">
+	<h1 class="pageTitle pageTitle--module">User repsonse</h1>
+</section>
+
+
+<section class="mainPanel clearfix">
+	<div class="qa-body clearfix">		
+		<div class="user-responses" ng-repeat="response in savedResponseCollection | orderBy:'stepId'">
+
+			<div class="user-response--info" ng-if="!response.isGroup">							
+				<h4><strong>Question: </strong>{{response.mainQuestionText}}</h4>
+				<ul>
+					<li ng-repeat="a in response.answers"><strong>Answer: </strong> {{a.answerText}}</li>
+				</ul>
+			</div>
+			<div class="user-response--info" ng-if="response.isGroup">
+				<h4><strong>Question: </strong>{{response.mainQuestionText}}</h4>														
+				<ul ng-repeat="q in response.subQuestionText">
+					<li>
+						<p><strong>{{q.questionText}}</strong></p>								
+						<p>{{response.answers[$index].answerText}}</p>								
+					</li>							
+				</ul>						
+			</div>
+
+		</div>					
+	</div>
+</section>

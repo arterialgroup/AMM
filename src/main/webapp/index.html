@@ -1,0 +1,259 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Arterial Education Meetings</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css assets/styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css assets/styles/main.css -->
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="arterialeduApp">
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+        <div ui-view="navbar" ng-hide="hideNav" ng-cloak=""></div>
+        <div class="container">
+            <div class="clearfix" ui-view="content"></div>
+
+            <div class="footer">
+                <a href="http://arterialgroup.com/arterialgroup-privacy-policy.html" target="_blank">Privacy policy</a>
+            </div>
+        </div>
+
+        <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+        <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+
+        <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+        <script src="scripts/app/app.js"></script>
+        <script src="scripts/app/app.constants.js"></script>
+        <script src="scripts/components/auth/auth.service.js"></script>
+        <script src="scripts/components/auth/principal.service.js"></script>
+        <script src="scripts/components/auth/authority.directive.js"></script>
+        <script src="scripts/components/auth/services/account.service.js"></script>
+        <script src="scripts/components/auth/services/activate.service.js"></script>
+        <script src="scripts/components/auth/services/password.service.js"></script>
+        <script src="scripts/components/auth/services/register.service.js"></script>
+        <script src="scripts/components/form/form.directive.js"></script>
+        <script src="scripts/components/form/pager.directive.js"></script>
+        <script src="scripts/components/form/pagination.directive.js"></script>
+        <script src="scripts/components/language/language.service.js"></script>
+        <script src="scripts/components/language/language.controller.js"></script>
+        <script src="scripts/components/admin/audits.service.js"></script>
+        <script src="scripts/components/admin/logs.service.js"></script>
+        <script src="scripts/components/admin/configuration.service.js"></script>
+        <script src="scripts/components/admin/monitoring.service.js"></script>
+        <script src="scripts/components/navbar/navbar.directive.js"></script>
+        <script src="scripts/components/navbar/navbar.controller.js"></script>
+        <script src="scripts/components/user/user.service.js"></script>
+        <script src="scripts/components/util/truncate.filter.js"></script>
+        <script src="scripts/components/util/base64.service.js"></script>
+        <script src="scripts/components/util/parse-links.service.js"></script>
+        <script src="scripts/app/account/account.js"></script>
+        <script src="scripts/app/account/activate/activate.js"></script>
+        <script src="scripts/app/account/activate/activate.controller.js"></script>
+        <script src="scripts/app/account/login/login.js"></script>
+        <script src="scripts/app/account/login/login.controller.js"></script>
+        <script src="scripts/app/account/logout/logout.js"></script>
+        <script src="scripts/app/account/logout/logout.controller.js"></script>
+        <script src="scripts/app/account/password/password.js"></script>
+        <script src="scripts/app/account/password/password.controller.js"></script>
+        <script src="scripts/app/account/password/password.directive.js"></script>
+        <script src="scripts/app/account/register/register.js"></script>
+        <script src="scripts/app/account/register/register.controller.js"></script>
+        <script src="scripts/app/account/settings/settings.js"></script>
+        <script src="scripts/app/account/settings/settings.controller.js"></script>
+        <script src="scripts/app/account/reset/finish/reset.finish.controller.js"></script>
+        <script src="scripts/app/account/reset/finish/reset.finish.js"></script>
+        <script src="scripts/app/account/reset/request/reset.request.controller.js"></script>
+        <script src="scripts/app/account/reset/request/reset.request.js"></script>
+        <script src="scripts/app/admin/admin.js"></script>
+        <script src="scripts/app/admin/audits/audits.js"></script>
+        <script src="scripts/app/admin/audits/audits.controller.js"></script>
+        <script src="scripts/app/admin/configuration/configuration.js"></script>
+        <script src="scripts/app/admin/configuration/configuration.controller.js"></script>
+        <script src="scripts/app/admin/docs/docs.js"></script>
+        <script src="scripts/app/admin/health/health.js"></script>
+        <script src="scripts/app/admin/health/health.controller.js"></script>
+        <script src="scripts/app/admin/logs/logs.js"></script>
+        <script src="scripts/app/admin/logs/logs.controller.js"></script>
+        <script src="scripts/app/admin/metrics/metrics.js"></script>
+        <script src="scripts/app/admin/metrics/metrics.controller.js"></script>
+        <script src="scripts/app/entities/entity.js"></script>
+        <script src="scripts/app/error/error.js"></script>
+        <script src="scripts/app/main/main.js"></script>
+        <script src="scripts/app/main/main.controller.js"></script>
+        <script src="scripts/components/auth/services/sessions.service.js"></script>
+        <script src="scripts/components/auth/provider/auth.session.service.js"></script>
+        <script src="scripts/app/account/sessions/sessions.js"></script>
+        <script src="scripts/app/account/sessions/sessions.controller.js"></script>
+        <script src="scripts/app/entities/question_type/question_type.js"></script>
+        <script src="scripts/app/entities/question_type/question_type.controller.js"></script>
+        <script src="scripts/app/entities/question_type/question_type-detail.controller.js"></script>
+        <script src="scripts/components/entities/question_type/question_type.service.js"></script>
+        <script src="scripts/app/entities/section_type/section_type.js"></script>
+        <script src="scripts/app/entities/section_type/section_type.controller.js"></script>
+        <script src="scripts/app/entities/section_type/section_type-detail.controller.js"></script>
+        <script src="scripts/components/entities/section_type/section_type.service.js"></script>
+        <script src="scripts/app/entities/module/module.js"></script>
+        <script src="scripts/app/entities/module/module.controller.js"></script>
+        <script src="scripts/app/entities/module/module-detail.controller.js"></script>
+        <script src="scripts/components/entities/module/module.service.js"></script>
+        <script src="scripts/app/entities/section/section.js"></script>
+        <script src="scripts/app/entities/section/section.controller.js"></script>
+        <script src="scripts/app/entities/section/section-detail.controller.js"></script>
+        <script src="scripts/components/entities/section/section.service.js"></script>
+        <script src="scripts/app/entities/step/step.js"></script>
+        <script src="scripts/app/entities/step/step.controller.js"></script>
+        <script src="scripts/app/entities/step/step-detail.controller.js"></script>
+        <script src="scripts/components/entities/step/step.service.js"></script>
+        <script src="scripts/app/entities/question/question.js"></script>
+        <script src="scripts/app/entities/question/question.controller.js"></script>
+        <script src="scripts/app/entities/question/question-detail.controller.js"></script>
+        <script src="scripts/components/entities/question/question.service.js"></script>
+        <script src="scripts/components/entities/question/questionByStep.service.js"></script>
+        <script src="scripts/app/entities/answer/answer.js"></script>
+        <script src="scripts/app/entities/answer/answer.controller.js"></script>
+        <script src="scripts/app/entities/answer/answer-detail.controller.js"></script>
+        <script src="scripts/components/entities/answer/answer.service.js"></script>
+        <script src="scripts/app/entities/userModule/userModule.js"></script>
+        <script src="scripts/app/entities/userModule/userModule.controller.js"></script>
+        <script src="scripts/app/entities/userModule/userModule-detail.controller.js"></script>
+        <script src="scripts/components/entities/userModule/userModule.service.js"></script>
+        <script src="scripts/components/entities/userModule/userModuleCreate.service.js"></script>
+
+        <script src="scripts//app/Controllers/Progress.controller.js"></script>
+        <script src="scripts/app/services/Progress.service.js"></script>
+        <script src="scripts/app/services/accountsHttp.service.js"></script>
+        <script src="scripts/app/services/sectionId.service.js"></script>
+        <script src="scripts/app/services/stepHttp.service.js"></script>
+        <script src="scripts/app/services/myLearningSectionHttp.services.js"></script>
+        <script src="scripts/app/services/StepsBySectionHttp.service.js"></script>
+        <script src="scripts/app/services/userResponse.service.js"></script>
+        <script src="scripts/app/services/registerUser.service.js"></script>
+        <script src="scripts/app/services/userModuleByUserIdHttp.service.js"></script>
+        <script src="scripts/app/services/attendeesHttp.service.js"></script>
+        <script src="scripts/app/services/sectionsHttp.service.js"></script>
+        <script src="scripts/app/services/meetingHttp.service.js"></script>
+        <script src="scripts/app/services/answerHttp.service.js"></script>
+        <script src="scripts/app/services/getAllattendeesHttp.service.js"></script>
+        <script src="scripts/app/services/userModuleHttp.service.js"></script>
+
+        <!-- Modules, Sections, Steps -->
+        <script src="scripts/app/myLearning/myLearning.js"></script>
+        <script src="scripts/app/myLearning/myModules.js"></script>
+        <script src="scripts/app/myLearning/controllers/myModules.controller.js"></script>
+        <script src="scripts/app/myLearning/controllers/myModulesDetail.controller.js"></script>
+        <script src="scripts/app/myLearning/controllers/moduleSectionDetail.controller.js"></script>
+        <script src="scripts/app/myLearning/controllers/SectionStepsDetailController.js"></script>
+        <script src="scripts/app/myLearning/controllers/StepQuestion.controller.js"></script>
+        <script src="scripts/app/myLearning/controllers/ConfirmController.js"></script>
+        <script src="scripts/app/myLearning/directives/NextPrevUI.directive.js"></script>
+        
+
+        
+
+
+
+        <script src="scripts/components/auth/services/accountHttp.service.js"></script>
+        <script src="scripts/app/services/userProgress.services.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningSectionHttp.services.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningUserProgressHttp.services.js"></script>
+        <script src="scripts/app/myLearning/services/myUserHttp.services.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningHttpQuestions.services.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningHttp.services.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningSteps.service.js"></script>
+        <script src="scripts/app/myLearning/services/myLearningSection.service.js"></script>
+        <script src="scripts/app/myLearning/services/myUserModule.services.js"></script>
+        <script src="scripts/app/services/meetingModuuleHttp.service.js"></script>
+        <script src="scripts/app/services/userModuleHttp.service.js"></script>
+
+
+        <script src="scripts/app/meeting-login/meeting-login.js"></script>
+        <script src="scripts/app/meeting-login/meeting-login-route.js"></script>
+        <script src="scripts/app/meeting-login/controllers/meetingLoginController.js"></script>
+        
+        <script src="scripts/app/moderator-ui/moderator-ui.js"></script>
+        <script src="scripts/app/moderator-ui/moderator-ui-route.js"></script>
+        <script src="scripts/app/moderator-ui/controllers/main-moderator.controller.js"></script>
+        <!--<script src="scripts/app/moderator-ui/controllers/user-response-moderator.controller.js"></script>-->
+
+        <!--<script src="scripts/app/directives/sameAs.js"></script>-->
+
+
+
+
+
+
+
+
+        <script src="scripts/app/entities/meeting/meeting.js"></script>
+        <script src="scripts/app/entities/meeting/meeting.controller.js"></script>
+        <script src="scripts/app/entities/meeting/meeting-detail.controller.js"></script>
+        <script src="scripts/components/entities/meeting/meeting.service.js"></script>
+        <script src="scripts/app/entities/attendee/attendee.js"></script>
+        <script src="scripts/app/entities/attendee/attendee.controller.js"></script>
+        <script src="scripts/app/entities/attendee/attendee-detail.controller.js"></script>
+        <script src="scripts/components/entities/attendee/attendee.service.js"></script>
+        <script src="scripts/app/entities/moduleType/moduleType.js"></script>
+        <script src="scripts/app/entities/moduleType/moduleType.controller.js"></script>
+        <script src="scripts/app/entities/moduleType/moduleType-detail.controller.js"></script>
+        <script src="scripts/components/entities/moduleType/moduleType.service.js"></script>
+        <script src="scripts/app/entities/moderator/moderator.js"></script>
+        <script src="scripts/app/entities/moderator/moderator.controller.js"></script>
+        <script src="scripts/app/entities/moderator/moderator-detail.controller.js"></script>
+        <script src="scripts/components/entities/moderator/moderator.service.js"></script>
+        <script src="scripts/app/entities/questionGroup/questionGroup.js"></script>
+        <script src="scripts/app/entities/questionGroup/questionGroup.controller.js"></script>
+        <script src="scripts/app/entities/questionGroup/questionGroup-detail.controller.js"></script>
+        <script src="scripts/components/entities/questionGroup/questionGroup.service.js"></script>
+        <script src="scripts/app/entities/meetingType/meetingType.js"></script>
+        <script src="scripts/app/entities/meetingType/meetingType.controller.js"></script>
+        <script src="scripts/app/entities/meetingType/meetingType-detail.controller.js"></script>
+        <script src="scripts/components/entities/meetingType/meetingType.service.js"></script>
+        <script src="scripts/app/entities/meetingModule/meetingModule.js"></script>
+        <script src="scripts/app/entities/meetingModule/meetingModule.controller.js"></script>
+        <script src="scripts/app/entities/meetingModule/meetingModule-detail.controller.js"></script>
+        <script src="scripts/components/entities/meetingModule/meetingModule.service.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

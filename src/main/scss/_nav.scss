@@ -1,0 +1,94 @@
+.navIcon {
+	width: 30px;
+	height: 30px;
+	border: 1px solid red;
+	//float: right;
+}
+
+.navIcon-line {
+	border-top: 2px solid black;
+	margin-bottom: 7px;
+}
+
+.navIcon-line:last-child {
+	margin-bottom: 0; 
+}
+
+.navbar-collapse {
+	@media #{$mobile} {
+		padding: 0;
+	}
+}
+
+.navbar-nav {
+
+	@media #{$mobile} {
+        margin: 0;
+    }
+}
+
+.nav-pills {
+
+	@media #{$mobile} {
+		display: block;
+		float: none;
+		text-align: center;
+		border-bottom: none;
+    }
+}
+
+.nav-pills > li,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a {
+	@media #{$mobile} {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+}
+
+.nav-pills > li.dropdown {
+
+	@media #{$mobile} {
+		border-bottom: 1px solid #e7e7e7;
+    }
+}
+
+
+
+li.logoutBtn {
+
+	@media #{$mobile} {
+
+		border-bottom: none;;
+		
+    }
+}
+
+.nav-pills li a {
+
+	@media #{$mobile} {
+        //font-size: 5px;
+		// display: block;
+		// float: none;
+
+    }
+}
+
+.dropdown-menu {
+	@media #{$mobile} {
+		padding: 0;
+		border-bottom: none;
+	}
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a {
+// .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav > .open > a {
+
+	@media #{$mobile} {
+		background-color: #fafafa;
+	}
+}
+
+// .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus

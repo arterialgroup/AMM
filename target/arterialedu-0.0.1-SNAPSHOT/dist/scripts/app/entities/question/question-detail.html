@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="arterialeduApp.question.detail.title">Question</span> {{question.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.question.text">Text</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{question.text}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.question.series">Series</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{question.series}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.question.showResults">ShowResults</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{question.showResults}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.question.question_type">question_type</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{question.question_type.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="arterialeduApp.question.step">step</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{question.step.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="question"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+{
+    "arterialeduApp": {
+        "step" : {
+            "home": {
+                "title": "Steps",
+                "createLabel": "Create a new Step",
+                "createOrEditLabel": "Create or edit a Step"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Step {{ id }}?"
+            },
+            "detail": {
+                "title": "Step"
+            },
+            "name": "Name",
+            "description": "Description",
+            "content": "Content",
+            "series": "Series",
+            "section": "section",
+            "question": "question"
+        }
+    }
+}

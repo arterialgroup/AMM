@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Update the Attendee table
+    -->
+    <changeSet author="jhipster" id="addColumn-attendee-20150526">
+			<addColumn tableName="ATTENDEE">
+				<column name="points_awarded" type="bit"/>
+			</addColumn>
+			<addColumn tableName="ATTENDEE">
+				<column name="certificate_path" type="varchar(255)"/>
+			</addColumn>
+		</changeSet>
+</databaseChangeLog>

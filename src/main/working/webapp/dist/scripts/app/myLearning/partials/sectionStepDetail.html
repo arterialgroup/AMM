@@ -1,0 +1,114 @@
+<section class="clearfix page-title">
+	<h1 class="pageTitle pageTitle--section">{{steps.name}}</h1>
+</section>
+
+<section class="mainPanel clearfix">
+	<div class="qa-body">
+		<form name="answers" class="clearfix" ng-submit="submitAnswer(answers.$valid)">
+			
+			<!-- Radio question -->
+			<div ng-repeat="questions in questionCollection" ng-if="isRadio && !isGroup">			
+				<h4 class="qa-body--heading">
+					<strong>{{questions.questionText}}</strong>
+				</h4>		
+
+				<!-- <div class="answerText clearfix">
+					<ul class="pull-right answerText-list">
+						<li class="answerText-text" ng-repeat="answer in groupAnswerCollection">{{answer.answerText}}</li>
+					</ul>
+				</div> -->
+
+
+
+				<ul class="formList clearfix" ng-switch="getTotal()">
+
+
+					<li ng-switch-when="3" class="answerOptions answerOptions--single radioBtnCon--rec clearfix" ng-repeat="answer in answerCollection">
+						<input type="radio" class="radioCheck" id="{{answer.answerId}}" ng-model="$parent.currentAnswer[questions.questionId]" name="ques" ng-value="{{answer}}" required>
+						<label class="radio-btn-label" for="{{answer.answerId}}"><span class="white">{{answer.answerText}}</span></label>
+					</li>
+
+					<li ng-switch-when="5" class="answerOptions answerOptions--single--five radioBtnCon--rec clearfix" ng-repeat="answer in answerCollection">
+
+
+						<input type="radio" class="radioCheck" id="{{answer.answerId}}" ng-model="$parent.currentAnswer[questions.questionId]" name="ques" ng-value="{{answer}}" required>
+						<label class="radio-btn-label" for="{{answer.answerId}}"><span class="white">{{answer.answerText}}</span></label>
+					</li>
+
+					<li ng-switch-default class="col-xs-12 col-sm-4 answerOptions answerOptions--single radioBtnCon--rec clearfix" ng-repeat="answer in answerCollection">
+
+
+						<input type="radio" class="radioCheck" id="{{answer.answerId}}" ng-model="$parent.currentAnswer[questions.questionId]" name="ques" ng-value="{{answer}}" required>
+						<label class="radio-btn-label" for="{{answer.answerId}}"><span class="white">{{answer.answerText}}</span></label>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Group radio question -->
+			<div ng-if="isGroup && !isFreeText">
+				<h4 class="qa-body--heading">
+					<strong>{{groupQuestionTitle}}</strong>	
+				</h4>
+				
+				<div class="answerOptionsText clearfix">
+					<ul class="pull-right answerText-list">
+						<!-- <li class="answerText-text" ng-class="groupAnswerCollection[0].answerText" ng-repeat="answer in groupAnswerCollection | orderBy:'answerId'"> -->
+						<li class="answerText-text" ng-class="groupAnswerCollection[0].answerText" ng-repeat="answer in groupAnswerCollection | orderBy:'answerId'">
+							{{answer.answerText}}
+						</li>
+					</ul>
+				</div>
+	
+				<div class="clearfix" ng-repeat="questions in groupQuestionCollection">
+					<ul class="questionOptions--group">
+						<li class="questionList" sub-script ng-model="questions.questionText"><strong>{{questions.questionText}}</strong></li>
+						<!-- <p parse-url="props" ng-model="questions.questionText">1 2 3</p> -->
+
+					</ul>
+
+
+				
+					<ul class="pull-right multiOption clearfix" ng-class="'multiOption' + groupAnswerCollection[0].answerText.toLowerCase().toLowerCase()">
+						<li class="answerOptions answerOptions--group" ng-class="groupAnswerCollection[0].answerText.toLowerCase() + '-radio'.toLowerCase()" ng-repeat="answer in groupAnswerCollection | orderBy:'answerId'">
+							<input type="radio" id="{{questions.questionText + $index}}" class="radioCheck" name="question{{$parent.$index}}" ng-model="$parent.currentAnswer[questions.questionId]" ng-value="{{answer}}" required>
+							<label class="radio-btn-label radio-btn-label--round" for="{{questions.questionText + $index}}"></label>
+							<p>{{answer.answerText}}</p>
+						</li>
+					</ul>
+				</div>
+
+				
+			</div>
+			<!-- END Group radio question -->
+	
+			<!-- Freetext question -->
+			<div ng-if="isFreeText">
+				<h4 class="qa-body--heading">
+					<strong>{{groupQuestionTitle}}</strong>	
+				</h4>
+
+				<div ng-repeat="questions in groupQuestionCollection">
+					<textarea class="formInput" ng-model="$parent.currentAnswer[questions.questionId]" rows="6" required></textarea>
+				</div>
+			</div>
+			<!-- END Freetext question -->	
+
+		</form>
+		
+		<!-- <div class="val-error" ng-if="answers.$invalid && answers.submitted">
+			<p>Please answer all questions</p>	
+		</div> -->
+
+		<nextprev-ui></nextprev-ui>
+		
+	</div>
+	
+	<p class="progressText">You have completed <strong>{{percentageComplete}}</strong> </p>
+	
+</section>
+
+<div class="completePercentage" ng-style="{ 'width' : percentageComplete}"></div>
+<div class="has-error" ng-if="answers.$invalid && answers.submitted">
+		<p>Please answer all questions</p>	
+	</div>
+

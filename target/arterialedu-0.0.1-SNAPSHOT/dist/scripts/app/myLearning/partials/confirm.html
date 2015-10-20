@@ -1,0 +1,55 @@
+<section class="clearfix page-title">
+	<h1>Confirmation</h1>
+</section>
+
+<section class="mainPanel clearfix">
+	<div class="qa-body">
+		
+
+		
+		
+		<form class="row" name="confirmForm" ng-submit="confirmSection(confirmForm.$valid)" novalidate>
+
+			
+			<section class="submitAgree clearfix">
+				
+				<input type="checkbox" class="confirmCheck" ng-model="confirm" name="confirm" value="true" required>	
+				<div class="col-sm-11 clearfix">
+					<p>
+						Thank you for your time. We hope you enjoy participating in <strong>Optimising Safety of NOACs in Clinical Practice: Trials, Tribulations and Truths</strong> on 20th September 2015.
+					</p>
+
+					<p>
+						Please tick the above before submiting your activity. 
+					</p>
+					<button type="submit" class="btns btns-success" ng-click="confirmSection(confirm)">Submit</button>	
+				</div>
+			</section>
+			
+			
+			
+
+		</form>
+		
+
+		<div class="pstatement">
+			<p>
+				<strong>Privacy statement:</strong> Aorta Pty Ltd (ABN18 088 118 521), trading as Arterial Education and Arterial Marketing, is bound by the Australian Privacy Principles (“APPs”) and adheres to these Principles. We collect your personal information for the purpose of enabling you to access our digital platform for educational programs, services and materials, including accredited continuing professional development (“this purpose”). If you do not provide the requested personal information to us, you may not be able to access materials and services, and we will not be able to process your continuing professional development (CPD) points or keep you up-to-date with our educational information. We may disclose your personal information to third party contractors who we engage to assist us with this purpose and when we do, we will take reasonable measures to ensure that those third party contractors comply with our Privacy Policies and are bound by the APPs or similar privacy obligations. We may use web-hosting servers that are located outside of Australia in which case we may disclose your personal information to those overseas web-hosting providers for that purpose only. You have the right to access, update and correct your personal information and/or decline to receive further educational communications from us at any time. Our Privacy Policy contains information about how you can access and request the correction of your personal information, or make a complaint about a breach of the APPs and how we will deal with your complaint. You can view the Arterial Group Privacy Policy by contacting the Privacy Officer at <a href="mailto:privacyofficer@arterialgroup.com">privacyofficer@arterialgroup.com</a> or at 21/26a Lime St, Sydney, NSW 2000.
+			</p>
+
+		</div>
+		
+		<div class="clearfix">
+			<button type="submit" class="btns btns-info pull-left" ng-click="prevPage();">Previous</button>
+		</div>
+		
+		
+	</div>
+	
+	<p class="progressText">You have completed <strong>100%</strong> </p>		
+
+</section>
+<div class="completePercentage"></div>
+<div ng-class="{ 'has-error' : confirmForm.$invalid && confirmForm.submitted}" ng-if="confirmForm.$invalid && confirmForm.submitted">
+<p>Please tick the above to agree before submitting.</p>	
+</div>

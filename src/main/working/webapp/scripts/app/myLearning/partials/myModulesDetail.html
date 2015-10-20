@@ -1,0 +1,32 @@
+<section class="clearfix page-title">
+	<heading-direcitve></heading-direcitve>
+</section>
+
+<section class="row">
+	<ul class="moduleList">
+		<li class="moduleList-item moduleList-item--singleLine moduleList-item--singleLine-hover" ng-repeat="section in sections">
+			<a ng-if="submitStage" class="blockLink" ng-click="goToSubmit(section.id)"></a>
+			<a ng-if="!submitStage" class="blockLink" ui-sref="sectionStepDetail({sectionId: section.id, id:section.newId.newId})" ng-click="activityModule.createUserModule()"></a>
+			<p>
+				{{section.name}}
+				{{module.module.id}}
+			
+			<span ng-if="section.newId.newId <= 1" class="blockTab pull-right">Start</span>
+			<span ng-if="section.newId.newId > 1" class="blockTab pull-right">Resume</span>
+			</p>
+
+		</li>
+	</ul>
+	
+	
+		<p>
+			<strong>Note: </strong>You can log out at any time and return to complete the activity later, if needed.
+		</p>
+	
+
+	<button type="submit" ui-sref="myModules" class="btns btns-info">
+		<span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+	</button>
+</section>
+
+

@@ -1,0 +1,19 @@
+{
+    "arterialeduApp": {
+        "userModule" : {
+            "home": {
+                "title": "UserModules",
+                "createLabel": "Create a new UserModule",
+                "createOrEditLabel": "Create or edit a UserModule"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete UserModule {{ id }}?"
+            },
+            "detail": {
+                "title": "UserModule"
+            },
+            "module": "module",
+            "user": "user"
+        }
+    }
+}

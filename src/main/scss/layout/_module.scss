@@ -1,0 +1,116 @@
+/* ---------------------------------------------------------------------------------------- */
+/* Module Styles 																			*/
+/* ---------------------------------------------------------------------------------------- */
+.moduleList { 
+	margin-bottom: 20px;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.moduleList-item {
+	padding: 0 10px;
+	position: relative;
+	z-index: 100;
+	transition: background 0.3s ease;
+}
+
+.moduleList-item:hover .icon-arrow { background-color: #D6D6D6; color: #FFF; }
+.moduleList-item:hover .moduleList-body--heading { color: #D6D6D6; }
+
+.moduleList-body {
+	font-size: 10px;
+	margin-left: 60px;
+    width: 70%;
+    @media #{$tablet} {
+    	font-size: 12px;
+    	margin-left: 10%;
+    }
+}
+
+.moduleList-item--heading { transition: color 0.3s ease; }
+.moduleList-body--heading, .pageTitle--section {
+	font-size: 12px;
+	
+	@media #{$tablet} {
+		font-size: 16px;	
+	}
+
+	 @media #{$desktop} {
+    	font-size: 20px;	
+    }
+
+}
+
+.moduleList-item--singleLine {
+	border-top: 1px solid $color-thinLine;
+	border-bottom: none;
+	padding: 10px 10px;
+	position: relative;
+}
+
+.moduleList-item--singleLine p {
+	margin: 0;
+	font-size: 12px;
+	@media #{$tablet} {
+		font-size: 16px;	
+	}
+
+	 @media #{$desktop} {
+    	//font-size: 20px;	
+    }
+}
+
+.moduleList-item--singleLine:last-child { border-bottom: 1px solid $color-thinLine; }
+
+.moduleList-item--singleLine-hover:hover { 
+	background-color: darken($color-listBody, 2%);
+}
+
+.icon {
+	font-size: 40px;
+	position: absolute;
+	height: 100%;
+	padding-top: 10px;
+	top: 0;
+	left: 0;
+	text-align: center;
+	opacity: 0.3;
+}
+
+.icon-moduleList {
+	width: 70px;
+	
+	@media #{$desktop} {
+    	width: 110px; 	
+  	}
+  	
+}
+
+.icon-arrow {
+	color: #BEBEBE;
+	font-size: 40px;
+	background-color: $color-tri; //#E9E9E9;
+	border-left: 1px solid #DBDBDB;
+	position: absolute;
+	height: 100%;
+	padding: 0 5px;
+	padding-top: 2%;
+	top: 0;
+	right: 0;
+	text-align: center;
+	transition: color 0.3s ease;
+	transition: background 0.5s ease;
+	z-index: 0;
+
+	@media #{$tablet} {
+    	//padding: 0 20px;
+    	vertical-align: middle;
+  	}
+
+}
+
+
+
+

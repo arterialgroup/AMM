@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "question_type" : {
+            "home": {
+                "title": "Question_types",
+                "createLabel": "Créer un nouveau Question_type",
+                "createOrEditLabel": "Créer ou éditer un Question_type"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Question_type {{ id }} ?"
+            },
+            "detail": {
+                "title": "Question_type"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}
+

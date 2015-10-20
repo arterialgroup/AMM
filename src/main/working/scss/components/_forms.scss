@@ -1,0 +1,199 @@
+.formGroup {
+	margin: 0 0 15px 0;
+}
+
+.formGroup > input, .formGroup > label, select {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 6px 12px;
+}
+
+.formInput {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 6px 12px;
+}
+
+.forms {
+	// margin: 0 -10px;
+}
+
+.formContain {
+	margin-top: 40px;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+
+	@media #{$tablet} {
+		margin-top: 80px;
+	}
+
+}
+
+.formContain h1 {
+	font-size: 26px;
+
+	@media #{$tablet} {
+		font-size: 36px;
+	}
+
+}
+
+.form--login {
+	padding: 50px;
+	text-align: left;
+	background: #ECECEC;
+}
+
+
+.rectangle-radio-btn {
+	display: inline-block;
+	text-align: center;
+}
+
+.answerOptions {
+	padding: 0;
+	text-align: center;
+}
+
+.answerOptions--single {
+	// margin: 0 80px 0 0;
+	width: 100%;
+
+	@media #{$desktop} {
+		margin-right: 6.5%;
+		width: 20%;
+		float: left;
+	}
+
+	@media #{$desktop} {
+		
+	}
+}
+.answerOptions--single:last-child {
+	margin: 0;
+}
+
+.answerOptions--single--five {
+	
+	@media #{$desktop} {
+		margin-right: 1%;
+		width: 19.2%;
+		float: left;
+	}
+
+	@media #{$desktop} {
+		
+	}
+}
+.answerOptions--single--five:last-child {
+	margin: 0;
+}
+
+
+
+
+.radio-btn-label {
+	font-weight: 600;
+	display: block;
+	color: #bdbdbd;
+	padding: 10px 0px;
+	border: 2px solid #bdbdbd;
+	transition: color .3s ease;
+	transition: background .3s ease;
+	cursor: pointer;
+	user-select: none;
+	&:hover {
+		color: $color-btn-success;
+		border: 2px solid $color-btn-success;
+	}	
+}
+
+.radio-btn-label:first-child {
+	padding-left: none;
+}
+
+.radio-btn-label:last-child {
+	padding-right: none;
+}
+
+
+.radio-btn-label--round {
+	//float: left;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;	
+
+	@media #{$tablet} {
+	float: left;
+	}
+
+	@media #{$desktop} {
+		
+	}
+}
+
+.rectangle-radio-btn label, .rectangle-radio-btn-incorrect label {
+	text-align: center;
+}
+
+// for when input is checked
+.radioCheck[type="radio"] {
+	display: none;
+ 
+	&:checked ~ label {
+		color: #FFF;
+		border: 2px solid $color-btn-success;
+		background: $color-btn-success;
+	}
+}
+
+.rectangle-radio-btn-incorrect input[type="radio"]:checked ~ label {
+	color: #a94442;
+	border: 2px solid #ebccd1;
+	background: #f2dede;
+}
+
+.formList {
+	list-style-type: none;
+	padding: 0;
+}
+
+textarea {
+	width: 100%;
+	// border: none;
+	margin: 0 auto;
+}
+
+.submitAgree div, .submitAgree input {
+	float: left;
+}
+
+.submitAgree div {
+	max-width: 95%;
+	@media #{$tablet} {
+		max-width: 100%;
+	}
+}
+
+textarea {
+  resize: vertical; /* user can resize vertically, but width is fixed */
+}
+
+
+
+
+
+
+
+
+
+

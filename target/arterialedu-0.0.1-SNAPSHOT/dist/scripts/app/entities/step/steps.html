@@ -1,0 +1,158 @@
+<div>
+
+    <h2 translate="arterialeduApp.step.home.title">Step</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveStepModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="arterialeduApp.step.home.createLabel">Create a new Step</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveStepModal" tabindex="-1" role="dialog" aria-labelledby="myStepLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myStepLabel" translate="arterialeduApp.step.home.createOrEditLabel">Create or edit a Step</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="step.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.step.name">Name</label>
+                            <input type="text" class="form-control" name="name"
+                                   ng-model="step.name" required>
+
+                            <div ng-show="editForm.name.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.step.description">Description</label>
+                            <input type="text" class="form-control" name="description"
+                                   ng-model="step.description">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.step.content">Content</label>
+                            <input type="text" class="form-control" name="content"
+                                   ng-model="step.content">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="arterialeduApp.step.series">Series</label>
+                            <input type="number" class="form-control" name="series"
+                                   ng-model="step.series">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="arterialeduApp.step.section">section</label>
+                            <select class="form-control" name="section" ng-model="step.section.id" ng-options="section.id as section.name for section in sections">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteStepConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(step.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="arterialeduApp.step.delete.question" translate-values="{id: '{{step.id}}'}">Are you sure you want to delete this Step?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="arterialeduApp.step.name">Name</th>
+                    <th translate="arterialeduApp.step.description">Description</th>
+                    <th translate="arterialeduApp.step.content">Content</th>
+                    <th translate="arterialeduApp.step.series">Series</th>
+                    <th translate="arterialeduApp.step.section">section</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="step in steps">
+                    <td><a ui-sref="stepDetail({id:step.id})">{{step.id}}</a></td>
+                    <td>{{step.name}}</td>
+                    <td>{{step.description}}</td>
+                    <td>{{step.content}}</td>
+                    <td>{{step.series}}</td>
+                    <td>{{step.section.name}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="stepDetail({id:step.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(step.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(step.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pager">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a href="#">&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a href="#">&lt;</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a href="#">&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

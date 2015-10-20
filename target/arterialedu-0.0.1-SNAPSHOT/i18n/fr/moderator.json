@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "moderator" : {
+            "home": {
+                "title": "Moderators",
+                "createLabel": "Créer un nouveau Moderator",
+                "createOrEditLabel": "Créer ou éditer un Moderator"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Moderator {{ id }} ?"
+            },
+            "detail": {
+                "title": "Moderator"
+            },
+            "user": "user",
+            "meeting": "meeting"
+        }
+    }
+}
+

@@ -1,0 +1,27 @@
+<section class="clearfix page-title">
+	<h1 class="pageTitle pageTitle--section">Moderator dashboard</h1>
+</section>
+
+<section class="mainPanel clearfix">
+	<div class="qa-body">
+		<form class="clearfix" name="moderatorDashboardForm" novalidate>
+			<div class="formGroup">
+				<label for="meetingID">Enter meeting ID</label>
+				<input type="meetingID" name="meetingID" ng-model="meeting.meetingID" class="formInput formInput__flat-right" 
+				ng-class="{ 'has-error' : moderatorDashboardForm.meetingID.$invalid && !moderatorDashboardForm.meetingID.$pristine && moderatorDashboardForm.submitted || moderatorDashboardForm.meetingID.$pristine && moderatorDashboardForm.submitted}" required>
+				<button type="submit" class="btn btn-success btn__flat-left" ng-click="findMeeting(meeting)">Submit</button>
+			</div>
+		</form>
+
+		<section ng-if="foundAttendess">
+			<ul>
+				<li ng-repeat="attendess in meetingAttendess">
+					{{attendess.accreditation}} | {{attendess.firstName}} {{attendess.lastName}} 
+				</li>
+			</ul>
+
+			<button ng-click=loadMore()>Load more</button>
+		</section>
+	</div>
+</section>
+

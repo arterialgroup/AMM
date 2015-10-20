@@ -1,0 +1,24 @@
+{
+    "arterialeduApp": {
+        "section" : {
+            "home": {
+                "title": "Sections",
+                "createLabel": "Créer un nouveau Section",
+                "createOrEditLabel": "Créer ou éditer un Section"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Section {{ id }} ?"
+            },
+            "detail": {
+                "title": "Section"
+            },
+            "name": "Name",
+            "description": "Description",
+            "series": "Series",
+            "module": "module",
+            "section_type": "section_type",
+            "step": "step"
+        }
+    }
+}
+

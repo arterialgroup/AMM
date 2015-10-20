@@ -1,0 +1,23 @@
+/* ---------------------------------------------------------------------------------------- */
+/* Module detail styles 																	*/
+/* ---------------------------------------------------------------------------------------- */
+
+.blockTab {
+	background: $color-btn-success;
+	position: absolute;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	padding: 10px;
+	top: 0;
+	right: 0;
+	text-align: center;
+	z-index: 1;
+	transition: background 0.2s ease-in;
+}
+
+
+.blockLink:hover + .blockTab {
+	background: lighten($color-btn-success, 10%);
+}

@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "meetingModule" : {
+            "home": {
+                "title": "MeetingModules",
+                "createLabel": "Create a new MeetingModule",
+                "createOrEditLabel": "Create or edit a MeetingModule"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete MeetingModule {{ id }}?"
+            },
+            "detail": {
+                "title": "MeetingModule"
+            },
+            "dateAvailable": "DateAvailable",
+            "meeting": "meeting",
+            "module": "module"
+        }
+    }
+}

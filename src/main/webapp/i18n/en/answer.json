@@ -1,0 +1,20 @@
+{
+    "arterialeduApp": {
+        "answer" : {
+            "home": {
+                "title": "Answers",
+                "createLabel": "Create a new Answer",
+                "createOrEditLabel": "Create or edit a Answer"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Answer {{ id }}?"
+            },
+            "detail": {
+                "title": "Answer"
+            },
+            "text": "Text",
+            "correct": "Correct",
+            "question": "question"
+        }
+    }
+}

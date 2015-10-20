@@ -1,0 +1,18 @@
+{
+    "arterialeduApp": {
+        "questionGroup" : {
+            "home": {
+                "title": "QuestionGroups",
+                "createLabel": "Create a new QuestionGroup",
+                "createOrEditLabel": "Create or edit a QuestionGroup"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete QuestionGroup {{ id }}?"
+            },
+            "detail": {
+                "title": "QuestionGroup"
+            },
+            "text": "Text"
+        }
+    }
+}
