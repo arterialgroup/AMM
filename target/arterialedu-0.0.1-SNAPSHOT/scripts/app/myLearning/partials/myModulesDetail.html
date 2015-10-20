@@ -4,7 +4,13 @@
 
 <section class="row">
 	<ul class="moduleList">
-		<li class="moduleList-item moduleList-item--singleLine moduleList-item--singleLine-hover" ng-repeat="section in sections">
+		
+		<div class="loadedNotComplete" ng-class="{ 'loadingWheel' : !loaded}">
+			<img src="../../../../assets/images/blue-loading.gif" height="120" width="120" alt="">
+		</div>
+
+		<li class="moduleList-item moduleList-item--singleLine moduleList-item--singleLine-hover loadedNotComplete" ng-repeat="section in sections" 
+		ng-class="{ 'loadedComplete' : loaded}">
 			<a ng-if="submitStage" class="blockLink" ng-click="goToSubmit(section.id)"></a>
 			<a ng-if="!submitStage" class="blockLink" ui-sref="sectionStepDetail({sectionId: section.id, id:section.newId.newId})" ng-click="activityModule.createUserModule()"></a>
 			<p>
